@@ -144,7 +144,7 @@ def altera_pet(id):
 
 
 ## -------->>   DELETE ROUTE  <<--------
-@server.route('/pets/<int:id>', methods=['REMOVE'])
+@server.route('/delete_pet/<int:id>', methods=['REMOVE'])
 @spec.validate(resp=Response('HTTP_204'))
 def delete_pet(id):
     """Remove um Pet do banco de dados"""
