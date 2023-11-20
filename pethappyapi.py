@@ -13,6 +13,8 @@ database = TinyDB(storage=MemoryStorage)  # "persiste isso aqui pra mim num arqu
 c = count()
 
 
+
+
 # Query para buscar um pet
 class QueryPet(BaseModel):
     id: Optional[int]
@@ -96,4 +98,6 @@ def delete_pet(id):
     return jsonify({})  # =====> POR DEFINIÇÃO, O DELETE NÃO RETORNA NADA. POR ISSO USA-SE {}
 
 
-server.run()
+#server.run()
+if __name__ == '__main__':
+    server.run(host="0.0.0.0", port=5000)
